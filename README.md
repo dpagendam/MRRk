@@ -18,7 +18,7 @@ Once installed, you will need to load the devtools R package and install the GEI
 
 ```
 library(devtools)
-install_github("dpagendam/GEIC")
+install_github("dpagendam/MRRk")
 ```
 
 ### Using this package
