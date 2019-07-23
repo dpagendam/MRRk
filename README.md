@@ -14,7 +14,7 @@ To install the package from GitHub, you will first need to install the devtools 
 
 ```install.packages("devtools")```
 
-Once installed, you will need to load the devtools R package and install the GEIC R package using:
+Once installed, you will need to load the devtools R package and install the MRRk R package using:
 
 ```
 library(devtools)
