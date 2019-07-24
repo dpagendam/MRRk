@@ -3,7 +3,8 @@
 
 ## Estimation of Insect Dispersal Parameters via Diffusion and Survival Models
 **Authors**: Dan Pagendam, CSIRO Data61 (dan.pagendam@csiro.au)
-**Contributors**: Brendan Trewin, CSIRO Health & Biosecurity (Brendan.Trewin@csiro.au)
+
+**Contributors**: Brendan Trewin, CSIRO Health & Biosecurity (brendan.trewin@csiro.au)
 
 ### About
 This package was developed as a simple alternative to using temporally-static dispersion kernels for the analysis of Mark-Release-Recapture experiments.  The approach uses a Gaussian dispersion kernel that evolves through time in a manner analogous to isotropic diffusion in 2D space.  The approach also allows for the inclusion of reduced trap catches over time as a result of death and for the specification of different distributional models for the trap counts.  The mean of the trap count distribution is modelled as being proportional to the time-integral of the diffusion kernel at the trap location over the time interval that the trap was catching for.
