@@ -35,7 +35,8 @@ densityIntegral = function(startTime, endTime, trapLocation, releaseXY, releaseT
     s <- sigma*sqrt(elapsedTimes)
     xDiffs <- rep(trapLocation[1], n) - releaseXY[, 1] - muX*elapsedTimes
     yDiffs <- rep(trapLocation[2], n) - releaseXY[, 2] - muY*elapsedTimes
-    return(sum(releaseNumbers*dnorm(xDiffs, 0, s)*dnorm(yDiffs, 0, s)))
+    numberAlive <- releaseNumbers*exp(-deathRate*elapsedTimes)
+    return(sum(numberAlive*dnorm(xDiffs, 0, s)*dnorm(yDiffs, 0, s)))
   }
 
   integratedConcentration <- integrate(Vectorize(f), startTime, endTime, subdivisions = 1000)
