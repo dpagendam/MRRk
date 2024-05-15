@@ -161,7 +161,7 @@ trapLogLikelihood = function(params, trapLocations, releaseLocations, trapData, 
       ind <- which(thisReleaseLocations[, 4] < endTime & thisReleaseLocations[, 1] == marker)
       if(length(ind) > 0)
       {
-        releaseXY <- thisReleaseLocations[ind, 2:3]
+        releaseXY <- as.matrix(thisReleaseLocations[ind, 2:3], nrow = length(ind))
         releaseTimes <- thisReleaseLocations[ind, 4]
         releaseNumbers <- thisReleaseLocations[ind, 5]
         Lambda <- densityIntegral(startTime, endTime, trapLocation, releaseXY, releaseTimes, releaseNumbers, muX, muY, sigma, deathRate)
